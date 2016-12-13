@@ -4,8 +4,8 @@ p2p编译环境镜像
 ## 生成镜像
     docker build -t p2p_compile .
 
-- 安装依赖库
-- 将底层库文件拷贝到镜像的/opt目录下，并编译
+- Dockerfile会安装依赖库
+- public和server目录是底层库，拷贝到镜像的/opt目录下，并编译
 
 ## 示例
 程序queryvp，假设目录在/opt/program/queryvp下
