@@ -19,8 +19,14 @@ p2p编译环境镜像
 - ./build 编译
 
 ### 运行
-    docker run --rm -v /opt/program/queryvp:/opt/server/cdn/queryvp \
-     -w /opt/server/cdn/queryvp p2p_compile ./queryvp -l
+    docker run -d --name queryvp -p 8282:8282 -p 443:443 \
+    -v /opt/queryvp:/opt/server/cdn/queryvp \
+    -w /opt/server/cdn/queryvp p2p_compile \
+    ./queryvp -l
+
+- -d 后台运行
+- --name 起名字
+- -p 映射端口
 
 ## 其它
 - 可配合portainer使用，只需要点点点就可以启动程序，so easy
