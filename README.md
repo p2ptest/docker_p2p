@@ -2,6 +2,9 @@
 p2p编译环境镜像
 
 ## 生成镜像
+    mkdir -p server/framecommon/lib server/framecommon/include/framecommon
+    mkdir -p server/srvframe/obj server//srvframe/lib
+    chmod +x server/srvframe/build.sh
     docker build -t p2p_compile .
 
 - Dockerfile会安装依赖库
