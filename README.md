@@ -4,7 +4,8 @@ p2p编译环境镜像
 ## 生成镜像
 	//git不能存储空目录，所以自己创建
 	mkdir -p server/framecommon/lib server/framecommon/include/framecommon
-	mkdir -p server/srvframe/obj server//srvframe/lib
+	mkdir -p server/srvframe/obj server/srvframe/lib server/srvframe/include
+	mkdir -p server/utils/include/json server/utils/include/hiredis server/utils/lib
 	
 	//更改build.sh的权限
 	chmod +x server/srvframe/build.sh
