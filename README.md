@@ -11,7 +11,7 @@ p2p编译环境镜像
 	
 	docker build -t p2p_compile .
 
-- Dockerfile会安装依赖库
+- Dockerfile会安装p2p编译的依赖库
 - public和server目录是底层库，拷贝到镜像的/opt目录下，并编译
 
 ## 示例
