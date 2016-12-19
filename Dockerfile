@@ -10,5 +10,5 @@ RUN buildDeps='gcc-c++ openssl-devel mysql-devel libuuid-devel' \
 	&& ln -s libmysqlclient_r.so libmysqlclient_r.a
 
 RUN cd /opt/server/framecommon && make \
-	&& cd /opt/server/srvframe && sh build.sh \
+	&& cd /opt/server/srvframe && chmod +x build.sh && ./build.sh \
 	&& cd /opt/server/utils && make
