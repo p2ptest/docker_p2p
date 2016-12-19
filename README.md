@@ -7,9 +7,6 @@ p2p编译环境镜像
 	mkdir -p server/srvframe/obj server/srvframe/lib server/srvframe/include
 	mkdir -p server/utils/include/json server/utils/include/hiredis server/utils/lib
 	
-	//更改build.sh的权限
-	chmod +x server/srvframe/build.sh
-	
 	docker build -t p2p_compile .
 
 - Dockerfile会安装p2p编译的依赖库
