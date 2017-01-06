@@ -7,7 +7,7 @@ p2p编译环境镜像
 	mkdir -p server/srvframe/obj server/srvframe/lib server/srvframe/include
 	mkdir -p server/utils/include/json server/utils/include/hiredis server/utils/lib
 	
-	docker build -t p2p_compile .
+	docker build -t p2p/compile .
 
 - Dockerfile会安装p2p编译的依赖库
 - public和server目录是底层库，拷贝到镜像的/opt目录下，并编译
@@ -16,7 +16,7 @@ p2p编译环境镜像
 程序queryvp，假设目录在/opt/queryvp下
 ### 编译
     docker run --rm -v /opt/queryvp:/opt/server/cdn/queryvp \
-     -w /opt/server/cdn/queryvp p2p_compile ./build.sh
+     -w /opt/server/cdn/queryvp p2p/compile ./build.sh
 
 - --rm 退出后删除
 - -v 配置数据卷
@@ -26,7 +26,7 @@ p2p编译环境镜像
 ### 运行
     docker run -d --name queryvp -p 8282:8282 -p 443:443 \
     -v /opt/queryvp:/opt/server/cdn/queryvp \
-    -w /opt/server/cdn/queryvp p2p_compile \
+    -w /opt/server/cdn/queryvp p2p/compile \
     ./queryvp -l
 
 - -d 后台运行
