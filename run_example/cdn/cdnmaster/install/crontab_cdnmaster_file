@@ -1,0 +1,2 @@
+*/1 * * * * root /opt/cdnmaster/install/monitor.sh /opt/cdnmaster cdnmaster
+

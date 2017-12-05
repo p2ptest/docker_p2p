@@ -1,0 +1,8 @@
+INCLUDE=-I/usr/include/mysql -I${PUBLIC_DIR}\
+-I${FRAMECOMMON}/include -I${UTILS}/include -I${SRVFRAME}/include \
+-I${SERVER_ROOT}/src/command -I${SERVER_ROOT}/src/main -I${SERVER_ROOT}/src/common \
+-I${SERVER_ROOT}/src/task -I${SERVER_ROOT}/src/thread
+LIBS=-L${SRVFRAME}/lib -lsrvframe -L${UTILS}/lib -ljson -lhiredis -L${FRAMECOMMON}/lib -lframecommon \
+ /usr/lib64/mysql/libmysqlclient_r.so -lz -lpthread -lssl -luuid -lcrypto -ldl
+MACRO=-D_REENTRANT -D__USE_EPOLL 
+CFLAGS = -g -Wall ${MACRO} 

@@ -1,0 +1,1 @@
+*/1 * * * * root /opt/CdnCtlMgrCenter/install/monitor.sh /opt/CdnCtlMgrCenter CdnCtlMgrCenter
