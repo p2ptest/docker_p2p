@@ -1,7 +1,7 @@
 # docker_p2p
 p2p编译环境镜像
 
-## 生成镜像
+## 生成编译镜像
 ```
 cd compile
 //git不能存储空目录,但是编译时需要，所以自己创建
@@ -40,7 +40,7 @@ docker run --rm \
 sh -c "chmod +x *.sh;./build.sh"
 ```
 
-### 生成镜像
+### 生成运行镜像
 ```
 docker build -t p2p/cdn .
 ```
